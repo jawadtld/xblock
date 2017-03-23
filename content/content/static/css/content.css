@@ -1,0 +1,130 @@
+/* CSS for ContentXBlock */
+.box {
+			border:2px solid #0094ff;
+			-moz-border-radius-topright:5px;
+      -moz-border-radius-topleft:5px;
+      -webkit-border-top-right-radius:5px;
+      -webkit-border-top-left-radius:5px;
+      border-top-left-radius:5px;
+      border-top-right-radius:5px;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+.box h2 {background:#0094ff;color:white;padding:10px;}
+.box h4 {background:#0094ff;color:white;padding:10px;}
+.box p {color:#333;text-align: justify;}
+.box ol {color:#333;text-align: justify;}
+.box ul {color:#333;text-align: justify;}
+.about-us {
+  margin: 30px 0;
+}
+
+.box pre{
+  white-space: normal;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.about-us-col {
+  min-height: 365px;
+  width: 30%;
+  margin: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #0076a3;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMjgwODE0IiB5MT0iLTAuMTAyMjA4IiB4Mj0iMC43MTkxODYiIHkyPSIxLjEwMjIwOCI+PHN0b3Agb2Zmc2V0PSItMjUlIiBzdG9wLWNvbG9yPSIjMTE1YjliIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMxMjkwZjgiLz48c3RvcCBvZmZzZXQ9IjEyNSUiIHN0b3AtY29sb3I9IiMxMTViOWIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(290deg, #115b9b -25%, #1290f8 50%, #115b9b 125%);
+  background-image: -webkit-linear-gradient(290deg, #115b9b -25%, #1290f8 50%, #115b9b 125%);
+  background-image: linear-gradient(160deg, #115b9b -25%, #1290f8 50%, #115b9b 125%);
+  color: #fff;
+  border: 1px;
+  border-radius: 10px;
+}
+.about-us-col .col-icon-wrapper {
+  min-height: 80px;
+  padding: 10px;
+}
+.about-us-col .col-title {
+  text-transform: uppercase;
+}
+.about-us-col .col-details {
+  text-align: justify;
+  margin-bottom: 25px;
+  min-height: 80px;
+  padding: 10px;
+}
+.btn-primary {
+  bottom: 0;
+  background: #115c9b;
+  border: none;
+  border-radius: 0;
+  padding: 10px 25px;
+  border: 1px solid transparent;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+
+}
+.btn-primary:hover {
+  background: #fff;
+  color: #1f76bd;
+  border: 1px solid #1f76bd;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #1f76bd;
+  border-radius: 0;
+}
+.btn-secondary:hover {
+  background: #1f76bd;
+  color: #fff;
+}
+ /* The Modal (background) */
+.my-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.my-modal-content {
+    background-color: #fefefe;
+    margin: 1% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+div.inline { float:left; }
+.clearBoth { clear:both; }
+.additional-content{
+	background: rgb(240,249,255); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(240,249,255,1) 0%, rgba(203,235,255,1) 47%, rgba(161,219,255,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

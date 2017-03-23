@@ -1,0 +1,88 @@
+<div class="content_block">
+	<div class="box">
+    <h2>{self.subtopic}</h2>
+    <div style="margin: 10px;"><pre>{self.subtopic_desc}</pre></div>
+    <img src="{self.image_url}" id="img1" style="width: 100%;" border="1">
+    <figcaption style="text-align: center;font-style: italic;">{self.image_desc}</figcaption>
+    <h4 id="additional_header" style="color: white;margin-bottom: 0;">ADDITIONAL CONTENTS</h4>
+    <div id="additional_holder" class="additional-content" style="padding: 0;margin: 0;">
+    <div id="sim_holder" class="about-us-col inline">
+    	<div class="col-icon-wrapper">
+    		<img src="/static/our-mission-icon.png">
+    	</div>
+    	<h3 style="text-align: center;color: black;">Simulation</h3>
+    		<p style="padding:10px;text-align:justify;font-style: italic;color: black;">{self.sim_desc}</p>
+    		<my-a id="myBtn1" class="btn btn-primary">Launch</my-a>
+    		
+    </div>
+    <div id="anim_holder" class="about-us-col inline">
+    	<div class="col-icon-wrapper">
+    		<img src="/static/animation.png">
+    	</div>
+    	<h3 style="text-align: center;color: black;">Animation</h3>
+    		<p style="padding:10px;text-align:justify;font-style: italic;color: black;">{self.anim_desc}</p>
+    		<my-a id="myBtn2" class="btn btn-primary">Launch</my-a>
+    </div>
+    <div id="vid_holder" class="about-us-col inline">
+    	<div class="col-icon-wrapper">
+    		<img src="/static/video.png">
+    	</div>
+    	<h3 style="text-align: center;color: black;">Videos</h3>
+    		<p style="padding:10px;text-align:justify;font-style: italic;color: black;">{self.vid_desc}</p>
+    		<my-a id="myBtn3" class="btn btn-primary">Launch</my-a>
+    		
+    </div>
+    <div id="game_holder" class="about-us-col inline">
+    	<div class="col-icon-wrapper">
+    		<img src="/static/game.png">
+    	</div>
+    	<h3 style="text-align: center;color: black;">Games</h3>
+    		<p style="padding:10px;text-align:justify;font-style: italic;color: black;">{self.game_desc}</p>
+    		<my-a id="myBtn4" class="btn btn-primary">Launch</my-a>
+    </div>
+    <br class="clearBoth">
+    </div>
+    <p style="font-size: 12px;font-style: italic;text-align: right;">You have visited this page {self.page_views} times</p>
+</div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal1" class="my-modal">
+
+  <!-- Modal content -->
+  <div class="my-modal-content" style="width: 800px;height: 600px;">
+    <span class="close">&times;</span>
+    <iframe id="iframe1" src="" align="center" frameborder="0" width="100%" height="90%" scrolling="no" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal2" class="my-modal">
+
+  <!-- Modal content -->
+  <div class="my-modal-content" style="width: 800px;height: 600px;">
+    <span class="close">&times;</span>
+    <iframe id="iframe2" src="" frameborder="0" align="center" width="100%" height="90%" scrolling="no" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal3" class="my-modal">
+
+  <!-- Modal content -->
+  <div class="my-modal-content" style="width: 800px;height: 600px;">
+    <span class="close">&times;</span>
+    <iframe id="iframe3" src="" frameborder="0" align="center" width="100%" height="90%" scrolling="no" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal4" class="my-modal">
+
+  <!-- Modal content -->
+  <div class="my-modal-content" style="width: 800px;height: 600px;">
+    <span class="close">&times;</span>
+    <iframe id="iframe4" src="" frameborder="0" align="center" width="100%" height="90%" scrolling="no" allowfullscreen></iframe>
+  </div>
+</div>
