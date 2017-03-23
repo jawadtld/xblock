@@ -1,0 +1,60 @@
+/* CSS for IntroductionXBlock */
+#banner{
+	position:relative;
+		}
+	img{
+	vertical-align:top;
+		}
+#bannerText{
+	position:absolute;
+	top: 50%;
+	left: 50%;
+  	justify-content: center;
+	align-items: center;
+	margin-right: -50%;
+	transform: translate(-50%,-50%);
+  	color: white;
+  	font-size: 50px;
+  	font-family: "Open sans", sans-serif;
+  	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  	}
+.box{
+	border:2px solid #0094ff;
+	-moz-border-radius-topright:5px;
+    -moz-border-radius-topleft:5px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-top-left-radius:5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+	}
+.box h2 {
+	background:#0094ff;
+	color:white;
+	padding:10px;
+    }
+.box p {color:#333;text-align:justify;}
+.box ol {color:#333;text-align:justify;}
+.box ul {color:#333;text-align:justify;}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.box pre{
+  white-space: normal;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
