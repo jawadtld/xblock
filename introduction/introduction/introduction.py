@@ -1,4 +1,4 @@
-"""TO-DO: Write a description of what this XBlock is."""
+"""Xblock for introduction"""
 
 import os
 import pkg_resources
@@ -20,7 +20,6 @@ class IntroductionXBlock(StudioEditableXBlockMixin, XBlock):
     # Fields are defined on the class.  You can access them in your code as
     # self.<fieldname>.
 
-    # TO-DO: delete count, and define your own fields.
     display_name = String(
         display_name=_('Display Name'),
         help=_('Display name of the component, which will be shown in the top ribbon.'),
@@ -46,7 +45,7 @@ class IntroductionXBlock(StudioEditableXBlockMixin, XBlock):
         display_name =_('Introduction'),
         default='',
         scope=Scope.content,
-        help=_('Do not use styles other than paragraph in the editor. You can use other functionalities including lists.'),
+        help=_(''),
         multiline_editor='html',
         )
 
@@ -68,7 +67,7 @@ class IntroductionXBlock(StudioEditableXBlockMixin, XBlock):
         display_name = _('Important points'),
         default='',
         scope=Scope.content,
-        help=_('Do not use styles other than paragraph in the editor. You can use other functionalities including lists.'),
+        help=_(''),
         multiline_editor='html',
         )
 
@@ -76,7 +75,7 @@ class IntroductionXBlock(StudioEditableXBlockMixin, XBlock):
         display_name = _('Definitions'),
         default='',
         scope=Scope.content,
-        help=_('Do not use styles other than paragraph in the editor. You can use other functionalities including lists.'),
+        help=_(''),
         multiline_editor='html',
         )
 
@@ -84,10 +83,11 @@ class IntroductionXBlock(StudioEditableXBlockMixin, XBlock):
         display_name = _('Formulae'),
         default='',
         scope=Scope.content,
-        help=_('Do not use styles other than paragraph in the editor. You can use other functionalities including lists.'),
+        help=_(''),
         multiline_editor='html',
         )
 
+    #Editable fields. Editing dialogbox will be rendered based on this entries.
     editable_fields = (
         'display_name',
         'title',
@@ -116,15 +116,19 @@ class IntroductionXBlock(StudioEditableXBlockMixin, XBlock):
         frag = Fragment(html.format(self=self))
         frag.add_css(self.resource_string("static/css/introduction.css"))
         js = self.resource_string("static/js/src/introduction.js")
+        first = self.resource_string("static/js/1.html")
         frag.add_javascript(js)
         frag.initialize_js('IntroductionXBlock')
+        frag.add_content(first)
         return frag
 
-
+    # It is not possible to access field values using self.<fieldname> inside js file. So we need to
+    # pass it through ajax call. We will initiate an ajax call from js file and return needed
+    # field values as json.
     @XBlock.json_handler
     def fieldstojs(self, data, suffix=''):
         """
-        Used to pass values of fields to content.js
+        Used to pass values of fields to introduction.js
         """
         return {'imp_content':self.imp_content,'def_content':self.def_content,'for_content':self.for_content,'result':'success'}
 

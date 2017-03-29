@@ -1,26 +1,39 @@
 <div class="introduction_block">
 
+	<!--Outer border in blue color-->
 	<div class="box">
+
+		<!--Unit title text with background-->
 		<div id="banner">
 			<img src="{self.title_bg}" style="height: 200px; width: 100%;">
 			<div id="bannerText">{self.title}</div>
 		</div>
 
+		<!--custom header with blue background and capitalized text-->
 		<div class="main-header">Introduction</div>
+
+		<!--Introduction content-->
 		<div style="margin: 10px;"><pre>{self.intro_content}</pre></div>
+
+		<!--Slideshow container-->
 		<div class="slideshow-container">
 			<img width="100%" class="mySlides fade" src="{self.slide1}">
 			<img width="100%" class="mySlides fade" src="{self.slide2}">
 		</div>
 		
+		<!--Important points section including header and content-->
 		<div id="important_points">
 			<div class="main-header">Important points</div>
 			<div style="margin: 10px;"><pre>{self.imp_content}</pre></div>
 		</div>
+
+		<!--Definitions section including header and content-->
 		<div id="definitions">
 			<div class="main-header">Definitions</div>
 			<div style="margin: 10px;"><pre>{self.def_content}</pre></div>
 		</div>
+
+		<!--Formulae section including header and content-->
 		<div id="formulae">
 			<div class="main-header">Formulae</div>
 			<div style="margin: 10px;"><pre>{self.for_content}</pre></div>

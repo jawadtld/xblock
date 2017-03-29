@@ -1,25 +1,28 @@
 /* CSS for IntroductionXBlock */
+/*unit title background image*/
 #banner{
 	position:relative;
 		}
 	img{
 	vertical-align:top;
 		}
+/* unit title text */
 #bannerText{
-	position:absolute;
+	position:absolute; 
 	top: 50%;
 	left: 50%;
-  	justify-content: center;
+  justify-content: center;
 	align-items: center;
 	margin-right: -50%;
 	transform: translate(-50%,-50%);
-  	color: white;
-  	font-size: 50px;
-  	font-family: "Open sans", sans-serif;
-  	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: white;
+  font-size: 50px;
+  font-family: "Open sans", sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   	}
+/* Blue outer border */
 .box{
-	border:2px solid #0094ff;
+	border:2px solid #0094ff; /*border properties including thickness and color*/
 	-moz-border-radius-topright:5px;
   -moz-border-radius-topleft:5px;
   -webkit-border-top-right-radius:5px;
@@ -28,7 +31,10 @@
   border-top-right-radius:5px;
 	}
 
-.box p,.box ol,.box ul {color:#333;text-align:justify;}
+/*text color and text alignment of normal content including ordered and unordered list*/
+.box p,.box ol,.box ul {color:#333;text-align:justify;} 
+
+/*headers given in blue color background and in capital letters*/
 .main-header{
   background: #0094ff;
   color: white;
@@ -49,6 +55,7 @@
   animation-duration: 1.5s;
 }
 
+/*To work the text align property as expected with pre tag*/
 .box pre{
   white-space: normal;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
