@@ -1,4 +1,6 @@
 /* CSS for ContentXBlock */
+
+/* Blue outer border */
 .box {
 			border:2px solid #0094ff;
 			-moz-border-radius-topright:5px;
@@ -9,7 +11,11 @@
       border-top-right-radius:5px;
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 		}
+
+/*text color and text alignment of normal content including ordered and unordered list*/
 .box p,.box ol,.box ul {color:#333;text-align: justify;}
+
+/*headers given in blue color background and in capital letters*/
 .main-header{
   background: #0094ff;
   color: white;
@@ -21,6 +27,7 @@
   text-transform: uppercase;
   margin: 0;  
 }
+
 .about-us {
   margin: 30px 0;
 }
@@ -30,6 +37,7 @@
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+/*additional content tiles*/
 .about-us-col {
   min-height: 365px;
   width: 30%;
@@ -47,6 +55,8 @@
   border: 1px;
   border-radius: 10px;
 }
+
+/*icon shown on additional content tile*/
 .about-us-col .col-icon-wrapper {
   min-height: 80px;
   padding: 10px;
@@ -60,6 +70,8 @@
   min-height: 80px;
   padding: 10px;
 }
+
+/*buttons on additional content tile*/
 .btn-primary {
   bottom: 0;
   background: #115c9b;
@@ -73,6 +85,8 @@
   transition: all, 0.3s;
 
 }
+
+/*when howering over additional content tile button*/
 .btn-primary:hover {
   background: #fff;
   color: #1f76bd;

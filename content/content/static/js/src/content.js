@@ -18,6 +18,7 @@ function ContentXBlock(runtime, element) {
 	var span3 = document.getElementsByClassName("close")[2];
 	var span4 = document.getElementsByClassName("close")[3];
 
+	//sections of the page
 	var sim_holder = document.getElementById("sim_holder");
 	var anim_holder = document.getElementById("anim_holder");
 	var vid_holder = document.getElementById("vid_holder");
@@ -43,22 +44,25 @@ function ContentXBlock(runtime, element) {
 
 		
 
-		// When the user clicks on <span> (x), close the modal
+		// When the user clicks on <span> (x) of simulation modal, close the modal
 		span1.onclick = function() {
 		    modal1.style.display = "none";
 		    document.getElementById('iframe1').src = "";
 		}
 
+		// When the user clicks on <span> (x) of animation modal, close the modal
 		span2.onclick = function() {
 		    modal2.style.display = "none";
 		    document.getElementById('iframe2').src = "";
 		}
 
+		// When the user clicks on <span> (x) of video modal, close the modal
 		span3.onclick = function() {
 		    modal3.style.display = "none";
 		    document.getElementById('iframe3').src = "";
 		}
 
+		// When the user clicks on <span> (x) of game modal, close the modal
 		span4.onclick = function() {
 		    modal4.style.display = "none";
 		    document.getElementById('iframe4').src = "";
@@ -86,6 +90,7 @@ function ContentXBlock(runtime, element) {
 		}
     });
 
+    //function to set values of fields in js and setting src field of each iframe in modal
     function updatevariable(result){
     	var jsonparsed = result;
     	sim_url = jsonparsed.sim_url;

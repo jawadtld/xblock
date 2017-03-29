@@ -1,4 +1,4 @@
-"""TO-DO: Write a description of what this XBlock is."""
+"""xblock for content template"""
 
 import os
 import pkg_resources
@@ -21,7 +21,6 @@ class ContentXBlock(StudioEditableXBlockMixin, XBlock):
     # Fields are defined on the class.  You can access them in your code as
     # self.<fieldname>.
 
-    # TO-DO: delete count, and define your own fields.
     display_name = String(
         display_name=_('Display Name'),
         help=_('Display name of the component'),
@@ -107,6 +106,7 @@ class ContentXBlock(StudioEditableXBlockMixin, XBlock):
         scope=Scope.user_state_summary,
         help=_('Small description about the game'))
 
+    #Editable fields. Editing dialogbox will be rendered based on this entries.
     editable_fields = (
         'display_name',
         'subtopic',
@@ -139,11 +139,15 @@ class ContentXBlock(StudioEditableXBlockMixin, XBlock):
         frag = Fragment(html.format(self=self))
         frag.add_css(self.resource_string("static/css/content.css"))
         js = self.resource_string("static/js/src/content.js")
+        first = self.resource_string("static/js/1.html")
         frag.add_javascript(js)
         frag.initialize_js('ContentXBlock')
+        frag.add_content(first)
         return frag
 
-
+    # It is not possible to access field values using self.<fieldname> inside js file. So we need to
+    # pass it through ajax call. We will initiate an ajax call from js file and return needed
+    # field values as json.
     @XBlock.json_handler
     def fieldstojs(self, data, suffix=''):
         """
