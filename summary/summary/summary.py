@@ -20,7 +20,6 @@ class SummaryXBlock(StudioEditableXBlockMixin, XBlock):
     # Fields are defined on the class.  You can access them in your code as
     # self.<fieldname>.
 
-    # TO-DO: delete count, and define your own fields.
     display_name = String(
         display_name=_('Display Name'),
         help=_('Display name of the component, which will be shown in the top ribbon.'),
@@ -32,7 +31,7 @@ class SummaryXBlock(StudioEditableXBlockMixin, XBlock):
         display_name = _('Summary'),
         default= '',
         scope=Scope.content,
-        help= _('Do not use styles other than paragraph in the editor. You can use other functionalities including lists.'),
+        help= _(''),
         multiline_editor='html',
         )
 
@@ -54,9 +53,11 @@ class SummaryXBlock(StudioEditableXBlockMixin, XBlock):
         """
         html = self.resource_string("static/html/summary.html")
         frag = Fragment(html.format(self=self))
+        first = self.resource_string("static/js/1.html")
         frag.add_css(self.resource_string("static/css/summary.css"))
         frag.add_javascript(self.resource_string("static/js/src/summary.js"))
         frag.initialize_js('SummaryXBlock')
+        frag.add_content(first)
         return frag
 
     

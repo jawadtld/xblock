@@ -22,14 +22,20 @@ def package_data(pkg, roots):
 
 setup(
     name='summary-xblock',
-    version='0.9',
+    version='1.1',
     description='summary XBlock',   # TODO: write a better description.
     license='UNKNOWN',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     packages=[
         'summary',
     ],
     install_requires=[
+        'django >= 1.8, < 1.9',
+        'django_nose',
+        'mock',
+        'coverage',
+        'mako',
         'XBlock',
+        'xblock-utils',
     ],
     entry_points={
         'xblock.v1': [
