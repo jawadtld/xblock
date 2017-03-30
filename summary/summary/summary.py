@@ -57,7 +57,7 @@ class SummaryXBlock(StudioEditableXBlockMixin, XBlock):
         frag.add_css(self.resource_string("static/css/summary.css"))
         frag.add_javascript(self.resource_string("static/js/src/summary.js"))
         frag.initialize_js('SummaryXBlock')
-        frag.add_content(first)
+        frag.add_content(first)#adding script for mathjax configuration
         return frag
 
     

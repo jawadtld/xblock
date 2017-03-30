@@ -11,6 +11,8 @@
             border-top-right-radius:5px;
             font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 		}
+
+/*main headers with blue background and capital letters*/
 .main-header{
   background: #0094ff;
   color: white;
@@ -23,7 +25,10 @@
   margin: 0;  
 }
 
+/*setting text color and alignment for paragraph, ordered list and unordered list*/
 .box p,.box ol,.box ul {color:#333;text-align: justify;}
+
+/*setting white-space: normal to work the alignment as expected and setting font*/
 .box pre{
   white-space: normal;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -32,6 +37,7 @@
   margin: 30px 0;
 }
 
+/*additional content tile*/
 .about-us-col {
   min-height: 365px;
   width: 30%;
@@ -62,6 +68,8 @@
   min-height: 80px;
   padding: 10px;
 }
+
+/*button on additional content tile*/
 .btn-primary {
   bottom: 0;
   background: #115c9b;
@@ -130,6 +138,8 @@
 }
 div.inline { float:left; }
 .clearBoth { clear:both; }
+
+/*additional content section*/
 .additional-content{
 	background: rgb(240,249,255); /* Old browsers */
 	background: -moz-linear-gradient(-45deg, rgba(240,249,255,1) 0%, rgba(203,235,255,1) 47%, rgba(161,219,255,1) 100%); /* FF3.6-15 */
